@@ -41,7 +41,6 @@ Last change:  4/september/18
 
 */
 
-
 /*=============== Fonts source Muli, Hobostd ===================*/
 
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400,400i,500,700,800');
@@ -1272,7 +1271,7 @@ header.sticky {
     width: 100%;
 }
 
-.activity-meta > h6 a {}
+/* .activity-meta > h6 a {} */
 
 .activitiez > li::before {
     content: "";
@@ -1508,7 +1507,7 @@ form button {
 }
 
 .we-video-info > ul li span.like:hover .we-video-info > ul li span.dislike:hover {
-    trnsform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
@@ -4048,7 +4047,7 @@ a.forgot-pwd {
 
 .more-options {
     display: inline-block;
-    float: right;
+    /* float: right; */
     position: relative;
 }
 
@@ -4536,7 +4535,7 @@ canvas {
     border: medium none;
     border-radius: 100%;
     color: transparent;
-    display: block;
+    display: none;
     height: 50px;
     margin: 30px auto 0;
     position: relative;
@@ -4734,14 +4733,14 @@ canvas {
     letter-spacing: 0.3px;
 }
 
-.top-area > ul.main-menu > li::after {
+/* .top-area > ul.main-menu > li::after {
     content: "";
     font-family: fontawesome;
     font-size: 13px;
     position: absolute;
     right: 10px;
     top: 0;
-}
+} */
 
 .top-area > ul.main-menu > li > ul li {
     line-height: initial;
@@ -6604,7 +6603,7 @@ a.reply {
     border-radius: 30px;
     color: #333;
     display: inline-block;
-    float: right;
+    /* float: right; */
     font-size: 12px;
     font-weight: 300;
     letter-spacing: 1px;
@@ -7344,7 +7343,7 @@ ul.offcanvas-menu ul {
     -ms-background-clip: text;
     -o-background-clip: text;
     background-clip: text;
-    text-fill-color: transparent;
+    /* text-fill-color: transparent; */
     margin-right: 10px;
     font-size: 60px;
     vertical-align: middle;
@@ -8534,7 +8533,7 @@ a.shopping-cart > i {
     border: 3px solid #eee;
     width: 124px !important;
     display: inline-block;
-    float: right;
+    /* float: right; */
     cursor: pointer;
 }
 
@@ -10065,4 +10064,97 @@ aside.sidebar.full-style {
 .orSubmit {
     font-size: 11px;
     padding-right: 10px;
+}
+.submenu-item .item i::before {
+    font-size: 8px;
+}
+.submenu-item .item span {
+    font-size: 16px;
+}
+.swiperHomeBaner .swiper-wrapper .swiper-slide {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.swiperHomeBaner .swiper-wrapper .swiper-slide .slogan {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.swiperHomeBaner .swiper-wrapper .swiper-slide img {
+    width: 100%;
+}
+.box-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-item .box {
+    width: 200px;
+    overflow: hidden;
+    box-shadow: 0 0 1.5px 1.5px #ede9e9;
+    border-radius: 2px;
+    margin: 10px;
+    transform: scale(1);
+    transition: .3s;
+}
+.box-item .box:hover {
+    transform: scale(1.03);
+    transition: .3s;
+}
+.box-item .box img {
+    width: 100%;
+    height: 50%;
+}
+.box-item .box .content {
+    border-top: 1px solid #ede9e9;
+    padding: 10px;
+    height: 50%;
+    position: relative;
+}
+.box-item .box .content h5:hover {
+    color: #0077b5;
+}
+.box-item .box .content p {
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+.box-item .box .content .time-post {
+    font-size: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+.evaluate {
+    display: flex;
+    flex-wrap: wrap;
+}
+.evaluate .box {
+    display: flex;
+    border: 1px solid #ede9e9;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+.evaluate .box .box-circle {
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+.evaluate .box .box-text {
+    width: 85%;
+}
+.evaluate .box .box-text .title {
+    position: relative;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 724px) {
+    .box-item {
+        justify-content: center;
+    }
 }
