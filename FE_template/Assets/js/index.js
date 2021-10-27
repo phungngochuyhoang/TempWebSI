@@ -1,11 +1,24 @@
 const $submennu = $(".submenu");
 const $submenuItem = $(".submenu-item");
 
+const typeList = {
+  all: "tất cả",
+  electroniceDevice: "Đồ điện tử",
+  papers: "Giấy tờ",
+  others: "Khác",
+};
+
 const constObject = {
   speedWeb: 200,
+  events: {
+    click: "click",
+    mousemove: "mousemove",
+    change: "change",
+    keydown: "keydown",
+  },
 };
 // only with menu level 1
-const dropdownTreeLevelOne = function (parent, child, speedTime) {
+const dropdownTreeLevelOne = function (parent, child, speedTime = null) {
   $submenuItem.hide();
   parent.each(function (i, el) {
     $(el).click(function () {
@@ -28,8 +41,49 @@ const readURL = function (input, imagePreview) {
     reader.readAsDataURL(input.files[0]);
   }
 };
+// code animation event scroll - (logic chưa nghĩ ra tốt hơn)
+const animationSilde = function ($elementParent, classElement) {
+  $elementParent.hide();
+  $elementParent.each(function () {
+    let imagePos = $(this).offset().top;
+    let topOfWindow = $(window).scrollTop();
+    if (imagePos < topOfWindow + 1) {
+      $(this).show();
+      $(this).addClass(classElement);
+    }
+  });
+};
+// slide down only use for select
+const slideDown = function (
+  parentEvent,
+  eventName,
+  showList,
+  speedTime = null
+) {
+  showList.hide();
+  parentEvent.on(eventName, function (event) {
+    event.stopPropagation();
+    $(window).click(() => showList.slideUp(speedTime));
+    showList.slideToggle(speedTime);
+  });
+};
+// select input
+const selectInput = function (parentEvent, eventName, inputValue) {
+  inputValue.val(typeList.all);
+  parentEvent.each((i, el) => {
+    $(el).on(eventName, () => inputValue.val(el.innerHTML));
+  });
+};
 
 $(document).ready(function () {
   //work home
   dropdownTreeLevelOne($submennu, $submenuItem, constObject.speedWeb);
+  // work list
+  slideDown(
+    $(".select-icon"),
+    constObject.events.click,
+    $(".list-select"),
+    constObject.speedWeb
+  );
+  selectInput($(".list-item"), constObject.events.click, $(".select-name"));
 });

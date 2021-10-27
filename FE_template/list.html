@@ -1,23 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <title>Winku Social Network Toolkit</title>
+    <title>Document</title>
     <link
-      rel="icon"
-      href="Assets/images/fav.png"
-      type="image/png"
-      sizes="16x16"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="Assets/css/main.min.css" />
     <link rel="stylesheet" href="Assets/css/style.css" />
     <link rel="stylesheet" href="Assets/css/color.css" />
     <link rel="stylesheet" href="Assets/css/responsive.css" />
     <link rel="stylesheet" href="Assets/css/wickedcss.min.css" />
+    <link rel="stylesheet" href="./Assets/css/index.css" />
+
+    <style>
+      @import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+
+.hide {
+  display: none;
+  visibility: hidden;
+  height: 0;
+}
+
+.pagination\:container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow\:text {
+  display: block;
+  font-size: 13px;
+}
+
+.pagination\:number {
+  --size: 32px;
+  --margin: 6px;
+  margin: 0 var(--margin);
+  border-radius: 2px;
+  background: #128ed1;
+  max-width: auto;
+  min-width: var(--size);
+  height: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 6px;
+  color: white;
+}
+@media (hover: hover) {
+  .pagination\:number:hover {
+    background: white;
+    color: #128ed1;
+  }
+}
+.pagination\:number:active {
+  background: white;
+  color: #128ed1;
+}
+
+.pagination\:active {
+  background: white;
+  position: relative;
+  color: #128ed1;
+}
+    </style>
+
   </head>
   <body>
     <div class="topbar stick">
@@ -81,7 +145,7 @@
     </div>
     <!-- topbar -->
 
-    <div class="container mt-4">
+    <div class="container mt-4 mb-4">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="search_item">
@@ -104,91 +168,155 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-12 banner mt-5">
-          <h1 class="tracking-in-contract" style="color: black; font-size: 5em">
-            ABOUT US
-          </h1>
-          <div class="fade-in-fwd">
-            <img src="./Assets/images/croods 1.png" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="col-12 col-lg-6" style="position: relative">
-          <h2>Why?</h2>
-          <p>
-            Hiện nay tình trạng thất lạc đồ dùng cá nhân của sinh viên đang là
-            vấn đề đáng quan tâm Để có thể hộ trợ sinh viên, cụ thể là tại
-            trường ĐH Công nghệ thông tin & Truyền thông VKU, chúng tôi đã lên ý
-            tưởng và thiết kế website dothatlacVKU.com, nhằm mục đích tương tác
-            qua lại giữa người mất và người nhặt một cách nhanh chóng và dễ dàng
-            nhất, cũng như người mất có thể tìm lại được đồ dùng cá nhân của
-            mình trong thời gian sớm nhất có thể.
-          </p>
-          <a href="#" style="position: absolute; right: 40px; cursor: pointer">
-            Read more >>
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <div
-            class="bg-img"
-            style="
-              background: url(./Assets/images/image\ 7.png);
-              background-size: cover;
-              width: 100%;
-              height: 500px;
-            "
-          ></div>
-        </div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="col-sm-12">
-          <h3 class="text-center">TEAM</h3>
-          <div
-            id="animationSildeLeft"
-            class="card-team col-12 col-lg-10 mb-5 mt-5"
-            style="margin: 0 auto"
-          >
-            <div
-              class="circle-img circle-left"
-              style="
-                background: white url(./Assets/images/image\ 6.png) no-repeat
-                  center;
-              "
-            ></div>
-            <div class="content pl-5">
-              <h3>Hoàng Thư</h3>
-              <b>Sinh viên trường ĐH Sư Phạm Kỹ Thuật - ĐH Đà Nẵng</b>
-              <p>
-                Tôi rất muốn tạo ra website này để hỗ trợ các bạn sinh viên
-                trong việc tìm lại đồ thât lạc của mình.
-              </p>
+        <div class="col-lg-12 col-12">
+          <!-- chức năng -->
+          <div class="function-bar">
+            <div class="component-select-ver1 col-md-2 col-4 mb-3">
+              <div class="select">
+                <input
+                  type="text"
+                  id="select-name"
+                  class="select-name"
+                  disabled
+                />
+                <div class="select-icon">
+                  <i class="fa fa-angle-down"></i>
+                </div>
+              </div>
+              <ul class="list-select">
+                <li class="list-item">Tất cả</li>
+                <li class="list-item">Đồ điện tử</li>
+                <li class="list-item">Giấy tờ</li>
+                <li class="list-item">Khác</li>
+              </ul>
             </div>
           </div>
-          <div id="animationSildeRight" class="card-team col-12 col-lg-10 mb-5">
+          <div class="list-items">
             <div
-              class="circle-img circle-right"
-              style="
-                background: white url(./Assets/images/image\ 6.png) no-repeat
-                  center;
-              "
-            ></div>
-            <div class="content-reverse pr-5">
-              <h3>Hoàng Thư</h3>
-              <b>Sinh viên trường ĐH Sư Phạm Kỹ Thuật - ĐH Đà Nẵng</b>
-              <p>
-                Tôi rất muốn tạo ra website này để hỗ trợ các bạn sinh viên
-                trong việc tìm lại đồ thât lạc của mình.
-              </p>
+              class="p-3 mb-3 d-flex"
+              style="position: relative; box-shadow: 0 0 1px 1px #d1d1d1; border-radius: 10px;"
+            >
+              <div class="col-6 col-md-2" style="background: rgb(208, 212, 214) url() no-repeat; background-size: cover;"></div>
+              <div class="content p-2">
+                <div class="head">
+                  <h5>
+                    Mình có nhặt được máy tính casio fx 570 tại phòng A207
+                  </h5>
+                  <span class="badge badge-primary p-2"> Đồ điện tử </span>
+                  <a href="#" class="mt-3 mb-3" style="font-size: 12px; display: block;"> Xem chi tiết >> </a>
+                </div>
+                <div class="bot pt-2">
+                  <div
+                    class="text-primary"
+                    style="font-size: 12px; cursor: pointer"
+                  >
+                    Người đăng: <span>Nguyễn Văn A</span
+                    ><span class="pl-5">1 phút trước</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
+          <div
+              class="p-3 mb-3 d-flex"
+              style="position: relative; box-shadow: 0 0 1px 1px #d1d1d1; border-radius: 10px;"
+            >
+            <div class="col-6 col-md-2" style="background: rgb(208, 212, 214) url() no-repeat; background-size: cover;"></div>
+              <div class="content p-2">
+                <div class="head">
+                  <h5>
+                    Mình có nhặt được máy tính casio fx 570 tại phòng A207
+                  </h5>
+                  <span class="badge badge-primary p-2"> Đồ điện tử </span>
+                  <a href="#" class="mt-3 mb-3" style="font-size: 12px; display: block;"> Xem chi tiết >> </a>
+                </div>
+                <div class="pt-2">
+                  <div
+                    class="text-primary"
+                    style="font-size: 12px; cursor: pointer"
+                  >
+                    Người đăng: <span>Nguyễn Văn A</span
+                    ><span class="pl-5">1 phút trước</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div
+              class="p-3 mb-3 d-flex"
+              style="position: relative; box-shadow: 0 0 1px 1px #d1d1d1; border-radius: 10px;"
+            >
+            <div class="col-6 col-md-2" style="background: rgb(208, 212, 214) url() no-repeat; background-size: cover;"></div>
+              <div class="content p-2">
+                <div class="head">
+                  <h5>
+                    Mình có nhặt được máy tính casio fx 570 tại phòng A207
+                  </h5>
+                  <span class="badge badge-primary p-2"> Đồ điện tử </span>
+                  <a href="#" class="mt-3 mb-3" style="font-size: 12px; display: block;"> Xem chi tiết >> </a>
+                </div>
+                <div class="bot pt-2">
+                  <div
+                    class="text-primary"
+                    style="font-size: 12px; cursor: pointer"
+                  >
+                    Người đăng: <span>Nguyễn Văn A</span
+                    ><span class="pl-5">1 phút trước</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- pagination -->
+          <div class="pagination:container mb-3 mt-3">
+            <div class="pagination:number arrow">
+              <svg width="18" height="18">
+                <use xlink:href="#left" />
+              </svg>
+              <span class="arrow:text"></span> 
+            </div>
+            
+            <div class="pagination:number">
+              1
+            </div>
+            <div class="pagination:number">
+              2
+            </div>
+            
+            <div class="pagination:number">
+              3
+            </div>
+            
+            <div class="pagination:number">
+              4
+            </div>
+            
+            <div class="pagination:number">
+              ...
+            </div>
+            
+            <div class="pagination:number arrow">
+              <svg width="18" height="18">
+                <use xlink:href="#right" />
+              </svg>
+            </div>
+          </div>          
+          <svg class="hide">
+            <symbol id="left" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></symbol>
+            <symbol id="right" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></symbol>
+          </svg>
+          <!-- pagination -->
         </div>
+
+
+
       </div>
     </div>
 
-    <footer class="mt-5">
+    
+
+    <footer>
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-4">
@@ -301,25 +429,9 @@
       </div>
     </footer>
 
-    <!-- <script
-      data-cfasync="false"
-      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script> -->
     <script src="Assets/js/main.min.js"></script>
     <script src="Assets/js/script.js"></script>
-    <!-- <script src="Assets/js/jquery.min.js"></script> -->
     <script src="./Assets/js/index.js"></script>
-    <script>
-      $("#imageUpload").change(function () {
-        readURL(this, "#imagePreview");
-      });
-      $("#cameraUpload").change(function () {
-        readURL(this, "#cameraPreview");
-      });
-      $(window).scroll(function () {
-        animationSilde($("#animationSildeLeft"), "slideLeft");
-        animationSilde($("#animationSildeRight"), "slideRight");
-      });
-    </script>
+    <script></script>
   </body>
 </html>
