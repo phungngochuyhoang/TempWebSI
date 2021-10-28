@@ -74,6 +74,16 @@ const selectInput = function (parentEvent, eventName, inputValue) {
     $(el).on(eventName, () => inputValue.val(el.innerHTML));
   });
 };
+// select image
+const selectImg = function ($replaceImage, $listImage) {
+  $listImage.each((i, el) =>
+    $(el).click(() => {
+      $replaceImage.css("background-image", `url(${el.src})`);
+      $replaceImage.hide();
+      $replaceImage.fadeIn(650);
+    })
+  );
+};
 
 $(document).ready(function () {
   //work home
@@ -86,4 +96,6 @@ $(document).ready(function () {
     constObject.speedWeb
   );
   selectInput($(".list-item"), constObject.events.click, $(".select-name"));
+  // work infomation
+  selectImg($(".bg-img"), $(".list-img .img"));
 });

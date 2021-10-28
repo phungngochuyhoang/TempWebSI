@@ -6672,7 +6672,7 @@ a.reply {
   top: -120px;
   -webkit-transition: all 0.3s linear 0s;
   -moz-transition: all 0.3s linear 0s;
-  -ms-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;;
   -o-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
   border: 2px dashed rgba(255, 255, 255, 0.2);
@@ -10201,6 +10201,11 @@ aside.sidebar.full-style {
   right: -20px;
 }
 
+.list-img {
+  display: flex;
+  width: 100%;
+}
+
 @media screen and (max-width: 724px) {
   .box-item {
     justify-content: center;
@@ -10251,6 +10256,10 @@ aside.sidebar.full-style {
   .bg-img {
       display: none;
   }
+  .list-img {
+    width: 100%;
+  }
+ 
 }
 
  .tracking-in-contract {
