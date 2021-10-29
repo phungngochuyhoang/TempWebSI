@@ -10060,7 +10060,7 @@ aside.sidebar.full-style {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 .box-item .box .content .time-post {
@@ -10205,6 +10205,23 @@ aside.sidebar.full-style {
   display: flex;
   width: 100%;
 }
+.menu-desktop {
+  padding: 0;
+  margin: 0;
+}
+.menu-desktop li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.menu-desktop li > ul > li:hover {
+  background-color: rgb(71, 118, 206);
+  color: white;
+}
+.menu-desktop li > ul > li.active {
+  background-color: rgb(71, 118, 206);
+  color: white;
+}
 
 @media screen and (max-width: 724px) {
   .box-item {
@@ -10258,8 +10275,14 @@ aside.sidebar.full-style {
   }
   .list-img {
     width: 100%;
+    overflow: hidden;
   }
- 
+  .fade-in-fwd {
+    display: none;
+  }
+  .menu-desktop {
+    display: none;
+  }
 }
 
  .tracking-in-contract {

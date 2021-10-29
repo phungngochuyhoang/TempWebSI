@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <title>Winku Social Network Toolkit</title>
+    <title>Document</title>
     <link
-      rel="icon"
-      href="Assets/images/fav.png"
-      type="image/png"
-      sizes="16x16"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.min.css"
+      integrity="sha512-AyOHI/tIMgoG+32apAs3OdqFowPSDqiz5vLcD2wdhBJ4J/xF1PI6UITcyhS5HCmsiioapRaONqYBvimxzFfnoA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="Assets/css/main.min.css" />
     <link rel="stylesheet" href="Assets/css/style.css" />
     <link rel="stylesheet" href="Assets/css/color.css" />
@@ -26,8 +31,7 @@
           <a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
         </span>
         <span class="mh-text">
-          <a href="newsfeed.html" title=""
-            >
+          <a href="newsfeed.html" title="">
             <div class="logo">
               <span class="char">F</span>
               <span class="char">I</span>
@@ -36,6 +40,12 @@
             </div>
           </a>
         </span>
+      </div>
+      <div class="mh-head second">
+        <form class="mh-form">
+          <input placeholder="search" />
+          <a href="#/" class="fa fa-search"></a>
+        </form>
       </div>
       <nav id="menu" class="res-menu">
         <ul>
@@ -108,116 +118,113 @@
         </div>
       </div>
     </div>
-    <!-- topbar -->
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div class="search_item mt-3">
-            <input
-              type="text"
-              class="form-control col-12 col-lg-8"
-              id="formGroupExampleInput"
-              placeholder="Nhập tên đồ vật cần tìm"
-            />
-            <button
-              type="button"
-              class="btn btn-primary col-lg-2 col-4 ml-3 m-btn"
-            >
-              Tìm kiếm
-            </button>
-          </div>
+        <div class="col-lg-3 border p-0">
+          <ul class="menu-desktop">
+            <li style="cursor: pointer">
+              <a class="submenu pl-3"
+                ><i class="fas fa-user-ninja"></i> Thông tin cá nhân
+              </a>
+              <ul class="pl-4 submenu-item" data-submenu-id="1">
+                <li class="mt-2 mb-2 border-0 item active">
+                  <a class="ml-2" href="#"> Chỉnh sửa thông tin cá nhân </a>
+                </li>
+                <li class="mt-2 mb-2 border-0 item">
+                  <a class="ml-2" href="#"> Thay đổi mật khẩu </a>
+                </li>
+              </ul>
+            </li>
+            <li style="cursor: pointer">
+              <a class="submenu pl-3">
+                <i class="fas fa-tasks"></i> Quản lý bài đăng
+              </a>
+              <ul class="pl-4 submenu-item" data-submenu-id="2">
+                <li class="mt-2 mb-2 border-0 item">
+                  <a class="ml-2" href="#"> Bài đã đăng </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-9 col-12 border border-left-0">
+          <h3 class="mt-3">Thông tin cá nhân</h3>
+          <form class="p-3 col-lg-6">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Họ và tên đệm</label>
+                <div class="d-flex align-items-center">
+                  <input type="text" class="form-control border"/>
+                  <i
+                    class="fas fa-edit text-secondary edit-toggle fs-4 ml-3"
+                    style="cursor: pointer"
+                  ></i>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label>tên</label>
+                <div class="d-flex align-items-center">
+                  <input type="text" class="form-control border"/>
+                  <i
+                    class="fas fa-edit text-secondary edit-toggle fs-4 ml-3"
+                    style="cursor: pointer"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <div class="d-flex align-items-center">
+                <input type="email" class="form-control border"/>
+                <i
+                  class="fas fa-edit text-secondary edit-toggle fs-4 ml-3"
+                  style="cursor: pointer"
+                ></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Số điện thoại</label>
+              <div class="d-flex align-items-center">
+                <input type="text" class="form-control border"/>
+                <i
+                  class="fas fa-edit text-secondary edit-toggle fs-4 ml-3"
+                  style="cursor: pointer"
+                ></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Mã Sinh viên</label>
+              <div class="d-flex align-items-center">
+                <input type="text" class="form-control border"/>
+                <i
+                  class="fas fa-edit text-secondary edit-toggle fs-4 ml-3"
+                  style="cursor: pointer"
+                ></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Địa chỉ </label>
+              <div class="d-flex align-items-center">
+                <input type="text" class="form-control border"/>
+                <i
+                  class="fas fa-edit text-secondary edit-toggle fs-4 ml-3"
+                  style="cursor: pointer"
+                ></i>
+              </div>
+            </div>
+            <div class="d-flex flex-row-reverse">
+              <button type="submit" class="btn btn-primary w-25 ml-3">
+                Lưu
+              </button>
+              <button type="submit" class="btn btn-danger w-25">Huỷ</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12 banner mt-5">
-          <h1 class="tracking-in-contract" style="color: black; font-size: 5em">
-            ABOUT US
-          </h1>
-          <div class="fade-in-fwd">
-            <img src="./Assets/images/croods 1.png" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="col-12 col-lg-6" style="position: relative">
-          <h2>Why?</h2>
-          <p>
-            Hiện nay tình trạng thất lạc đồ dùng cá nhân của sinh viên đang là
-            vấn đề đáng quan tâm Để có thể hộ trợ sinh viên, cụ thể là tại
-            trường ĐH Công nghệ thông tin & Truyền thông VKU, chúng tôi đã lên ý
-            tưởng và thiết kế website dothatlacVKU.com, nhằm mục đích tương tác
-            qua lại giữa người mất và người nhặt một cách nhanh chóng và dễ dàng
-            nhất, cũng như người mất có thể tìm lại được đồ dùng cá nhân của
-            mình trong thời gian sớm nhất có thể.
-          </p>
-          <a href="#" style="position: absolute; right: 40px; cursor: pointer">
-            Read more >>
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <div
-            class="bg-img"
-            style="
-              background: url(./Assets/images/image\ 7.png);
-              background-size: cover;
-              width: 100%;
-              height: 500px;
-            "
-          ></div>
-        </div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="col-sm-12">
-          <h3 class="text-center">TEAM</h3>
-          <div
-            id="animationSildeLeft"
-            class="card-team col-12 col-lg-10 mb-5 mt-5"
-            style="margin: 0 auto"
-          >
-            <div
-              class="circle-img circle-left"
-              style="
-                background: white url(./Assets/images/image\ 6.png) no-repeat
-                  center;
-              "
-            ></div>
-            <div class="content pl-5">
-              <h3>Hoàng Thư</h3>
-              <b>Sinh viên trường ĐH Sư Phạm Kỹ Thuật - ĐH Đà Nẵng</b>
-              <p>
-                Tôi rất muốn tạo ra website này để hỗ trợ các bạn sinh viên
-                trong việc tìm lại đồ thât lạc của mình.
-              </p>
-            </div>
-          </div>
-          <div id="animationSildeRight" class="card-team col-12 col-lg-10 mb-5">
-            <div
-              class="circle-img circle-right"
-              style="
-                background: white url(./Assets/images/image\ 6.png) no-repeat
-                  center;
-              "
-            ></div>
-            <div class="content-reverse pr-5">
-              <h3>Hoàng Thư</h3>
-              <b>Sinh viên trường ĐH Sư Phạm Kỹ Thuật - ĐH Đà Nẵng</b>
-              <p>
-                Tôi rất muốn tạo ra website này để hỗ trợ các bạn sinh viên
-                trong việc tìm lại đồ thât lạc của mình.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer class="mt-5">
+    <footer>
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-4">
@@ -330,25 +337,9 @@
       </div>
     </footer>
 
-    <!-- <script
-      data-cfasync="false"
-      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script> -->
     <script src="Assets/js/main.min.js"></script>
     <script src="Assets/js/script.js"></script>
-    <!-- <script src="Assets/js/jquery.min.js"></script> -->
     <script src="./Assets/js/index.js"></script>
-    <script>
-      $("#imageUpload").change(function () {
-        readURL(this, "#imagePreview");
-      });
-      $("#cameraUpload").change(function () {
-        readURL(this, "#cameraPreview");
-      });
-      $(window).scroll(function () {
-        animationSilde($("#animationSildeLeft"), "slideLeft");
-        animationSilde($("#animationSildeRight"), "slideRight");
-      });
-    </script>
+    <script></script>
   </body>
 </html>

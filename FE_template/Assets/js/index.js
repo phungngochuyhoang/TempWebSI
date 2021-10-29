@@ -84,6 +84,14 @@ const selectImg = function ($replaceImage, $listImage) {
     })
   );
 };
+// enabled input
+const enabledInput = function ($eleSelect, eventName, enabled = false) {
+  $eleSelect.on(eventName, function () {
+    console.log($(this).prev())
+    $(this).prev().prop('disabled', enabled);
+    enabled = !enabled;
+  });
+};
 
 $(document).ready(function () {
   //work home
@@ -98,4 +106,6 @@ $(document).ready(function () {
   selectInput($(".list-item"), constObject.events.click, $(".select-name"));
   // work infomation
   selectImg($(".bg-img"), $(".list-img .img"));
+  // work personal
+  
 });
